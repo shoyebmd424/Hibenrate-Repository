@@ -8,11 +8,13 @@
         <property name="connection.username">root</property>
         <property name="connection.password">shoyeb</property>
         <property name="dialect">org.hibernate.dialect.MySQL5Dialect</property>
-        <property name="hbm2ddl.auto">create</property>
+        <property name="hbm2ddl.auto">update</property>
         <property name="show_sql">true</property>
         <mapping class="org.example.Student"/>
         <mapping class="org.example.Address"/>
         <mapping class="org.map.Questions"/>
         <mapping class="org.map.Answer"/>
+        <mapping class="org.map.map1.Emp"/>
+        <mapping class="org.map.map1.Project"/>
     </session-factory>
 </hibernate-configuration>

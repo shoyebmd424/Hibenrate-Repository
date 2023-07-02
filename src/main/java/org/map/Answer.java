@@ -1,9 +1,6 @@
 package org.map;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.OneToOne;
+import javax.persistence.*;
 
 @Entity
 public class Answer {
@@ -12,7 +9,8 @@ public class Answer {
 
     private int answerId;
     private  String answer;
-    @OneToOne(mappedBy = "answer")
+//    @OneToOne(mappedBy = "answer")
+    @ManyToOne
     private  Questions question;
 
     public Questions getQuestion() {
@@ -46,5 +44,14 @@ public class Answer {
 
     public void setAnswer(String answer) {
         this.answer = answer;
+    }
+
+    @Override
+    public String toString() {
+        return "Answer{" +
+                "answerId=" + answerId +
+                ", answer='" + answer + '\'' +
+                ", question=" + question +
+                '}';
     }
 }
